@@ -1,5 +1,11 @@
+//変数は「箱」
+
+const btnMenu = document.querySelector(".btn-menu");
+console.log(btnMenu);
+
 $(".openbtn1").click(function () {
     $(this).toggleClass('active');
+    $(btnMenu).toggleClass("active");
 });
 
 /* ページ２ */  
