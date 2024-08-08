@@ -1,67 +1,27 @@
-// $(".summary").mouseover{
-//     $(this).toggleClass('on-summary');
-// }
-
 //変数は「箱」
 
-const btnMenu = document.querySelector("#btn-menu");
+const btnMenu = document.querySelector(".btn-menu");
 
 $(".openbtn1").click(function () {
     $(this).toggleClass('active');
     $(btnMenu).toggleClass('active');
 });
 
-$(function(){
-    topBtn=$('.page_top');
-    // topBtn.hide();
-    
-    // ボタンの表示設定
-    // $(window).scroll(function(){
-    // if($(this).scrollTop()>80){
-    //     // 画面を80pxスクロールしたら、ボタンを表示する
-    //     topBtn.fadeIn();
-    // }else{
-    //     // 画面が80pxより上なら、ボタンを表示しない
-    //     topBtn.fadeOut();
-    // }
-    // });
-    
-    // ボタンをクリックしたら、スクロールして上に戻る
-    topBtn.click(function(){
-    $('body,html').animate({
-    scrollTop: 0},500);
-    return false;
-    });
-});
-
-
 /* ページ２ */  
 
-$(".info").modaal({
-    overlay_close:true,//モーダル背景クリック時に閉じるか
-    before_open:function(){// モーダルが開く前に行う動作
-        $('html').css('overflow-y','hidden');/*縦スクロールバーを出さない*/
-    },
-    after_close:function(){//モーダルが閉じた後に行う動作
-        $('html').css('overflow-y','scroll');/*縦スクロールバーを出す*/
-    }
-});
 
 
-/*ページ３*/
 $('.slider').slick({
     autoplay: true,//自動的に動き出すか。初期値はfalse。
     infinite: true,//スライドをループさせるかどうか。初期値はtrue。
     slidesToShow: 3,//スライドを画面に3枚見せる
     slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-    autoplaySpeed:1500,//スライドの移動間隔
     pauseOnHover: false,//オンマウスでスライドを一時停止させるかどうか。初期値はtrue。
     speed: 300, //スライドのスピード
     arrows: true,// 矢印
     prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
     nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
     dots: true,//下部ドットナビゲーションの表示
-    centerMode: true,
     responsive: [
         {
         breakpoint: 769,//モニターの横幅が769px以下の見せ方
@@ -82,14 +42,6 @@ $('.slider').slick({
 
 /*page4のトランジション*/
 
-    // トリミング
-    // $(window).load(function() {
-    //     $('.activity').imageFit();
-    // });
-    // $('.activity').imageFit({
-    //     mode: 'inside',
-    //     force: 'true'
-    // });
 
 let a = 0;
 const transition = () => {
@@ -106,29 +58,25 @@ const transition = () => {
         // TR_next[j] = useImg[index+1]; 
         console.log(index)
     }
-    if(a < 3){//写真を一通り見せたら最初から
+    if(a <= 3){//写真を一通り見せたら最初から
         a++;
         // console.log(a);
     } else {
         a = 0;
     }
-    
-
     //取得したTR_showの写真を表示
     document.getElementById("activity1_img").src=TR_show[2];
     document.getElementById("activity2_img").src=TR_show[1];
     document.getElementById("activity3_img").src=TR_show[0];
-
 }
-setInterval('transition()', 1800);
-// $(".activity").click(function(){
-//     transition();
-// });
+setInterval("transition()", 3000);
 
 //使いたい写真を配列に入れる
-const useImg = new Array("file:///c%3A/Users/81801/OneDrive/yusuke.seedTech/Web%E5%88%B6%E4%BD%9C/OriginalWeb/assets/image/%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B0.png",
-    "file:///c%3A/Users/81801/OneDrive/yusuke.seedTech/Web%E5%88%B6%E4%BD%9C/OriginalWeb/assets/image/%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC.png",
-    "file:///c%3A/Users/81801/OneDrive/yusuke.seedTech/Web%E5%88%B6%E4%BD%9C/OriginalWeb/assets/image/%E3%82%B9%E3%83%91%E3%82%A4%E3%82%AF.png"
+const useImg = new Array("https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_01.jpg",
+    "https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_02.jpg", 
+    "https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_03.jpg",
+    "https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_04.jpg",
+    "https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_05.jpg"
 );
 
 $('.flower_top').slick({

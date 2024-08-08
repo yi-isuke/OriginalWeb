@@ -15,29 +15,7 @@ h2{
 
 }
 
-.summary{
-    list-style: none;
-}
 
-/* .on-summary{
-    cursor: pointer;
-    color: #333;
-} */
-
-
-
-.page_top_btn{
-    position: fixed;
-    /* font-size: 4rem; */
-    height: 10vh;
-    width: 10vh;
-    top: 80vh;
-    right: 4vw;
-    border-radius: 50%;
-    opacity: 0.8;
-    z-index: 8;
-    /* text-decoration: none; */
-}
 
 .header {
     background-color: #000000;
@@ -55,17 +33,10 @@ h2{
 }
 
 .header-left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     padding-left: 2vw;
+    padding-bottom: 2vh;
     font-size: 3vh;
     color: #fff;
-}
-
-
-.rycaon_b{
-    height: 10vh;
 }
 
 .header-right{
@@ -129,37 +100,22 @@ h2{
     width: 30%;
 }
 
-#btn-menu{
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    right: -150%;
-    transition: right 1s ease;
-    /* margin-top:100px; */
-    z-index: 9;
+.header .btn-menu{
+    /* position: fixed; */
+    display: none;
+    margin-top:100px;
+    /* z-index: 9; */
     width: 100vw;
     height: 100vh;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-#btn-menu.active{
+.header .btn-menu .active{
     /* position: fixed; */
-    right: 0;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
+    display: block;
+    transition: all 0.4s;
 }
 
-.menu_hum{
-    text-decoration: none;
-    margin: 0 20px;
-}   
-
+/*========= レイアウトのためのCSS ===============*/
 
 #page1{
     height: 100vh;
@@ -182,7 +138,7 @@ h2{
 }
 
 .represent_img{
-    width: 30vw;
+    height: 30vw;
     border-radius: 10%;
 }
 
@@ -197,38 +153,8 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
 
-/* すべて共通：hideエリアをはじめは非表示 */
-.hide-area{
-    display: none;
-    padding: 30px;
 }
-
-/* すべて共通：モーダルのボタンの色を変更したい場合 */
-.modaal-close::after,
-.modaal-close:before{
-    background:#ccc
-}
-
-.modaal-close:focus:after,
-.modaal-close:focus:before,
-.modaal-close:hover:after,
-.modaal-close:hover:before{
-    background: #666;
-}
-
-.info-list{
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-}
-
-.info{
-    text-decoration: none;
-    font-size: 3vw;
-}
-
 
 #page3{
     height: 100vh;
@@ -245,13 +171,12 @@ css===================================*/
 }
 
 .slider img {
-    width: 90%;/*スライダー内の画像を横幅100%に*/
+    width: 100%;/*スライダー内の画像を横幅100%に*/
     height:auto;
 }
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 .slider .slick-slide {
     margin:0 10px; /*スライド左右の余白調整*/ 
-
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
@@ -278,7 +203,7 @@ css===================================*/
 .slick-prev {/*戻る矢印の位置と形状*/
     left: 4%;
     transform: rotate(-135deg);
-    z-index: 1;
+    z-index: 111;
 }
 
 .slick-next {/*次へ矢印の位置と形状*/
@@ -335,23 +260,22 @@ css===================================*/
 }
 
 #activity1_img{
-    width: 35vw;
-    /* margin-top: 5vh;
-    margin-right: 5vw; */
+    width: 50vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
     filter: opacity(0.6);
     z-index: 1;
     transform: rotate(10deg);
 }
 
 #activity2_img{
-    width: 30vw;
-    /* margin-top: 5vh;
-    margin-right: 5vw; */
-    filter: opacity(0.7);
-    /* filter: blur(0.6); */
-    /* background-color: #48daff; */
+    width: 45vw;
+    margin-top: 5vh;
+    margin-right: 5vw;
+    filter: opacity(0.6);
+    background-color: #48daff;
     z-index: 2;
-    transform: rotate(345deg);
+    transform: rotate(340deg);
     /* animation: trans_cr 3s linear 0s forwards;
     animation-duration: 1;
     animation-fill-mode: backwards;
@@ -359,7 +283,7 @@ css===================================*/
 }
 
 #activity3_img{
-    width: 25vw;
+    width: 40vw;
     z-index: 3;
     /* animation: trans_lc 3s linear 0s forwards;
     animation-duration: 1;
@@ -401,7 +325,7 @@ css===================================*/
 .flower {
     position:relative;
     z-index: 1;
-    top: 15vh;
+    top: 10vh;
     /* height: 100vh;スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
 }
 
@@ -459,23 +383,18 @@ css===================================*/
 }
 
 .footer{
-    height: 50vh;
+    height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.gaiyou{
-    text-decoration: none;
-}
-
 .cutBall{
     border-radius: 50%;
-    height: 5vh;
-    opacity: 0.9;
+    height: 10vh;
 }
 
 .cRight{
-    font-size: 2rem;
+    font-size: xx-large;
 }
