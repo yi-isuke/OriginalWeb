@@ -1,22 +1,21 @@
 @charset "utf-8";
 
-body{
-    background-image: url(../image/background-color.png);
-    background-size: 100vw;
-    background-repeat: repeat;
+body {
+  background-image: url(../image/background-color.png);
+  background-size: 100vw;
+  background-repeat: repeat;
 }
 
-.title1{
-    font-family: "Nikukyu";
+.title1 {
+  font-family: "Nikukyu";
 }
 
-h2{
-    font-size: 2em;
-
+h2 {
+  font-size: 2em;
 }
 
-.summary{
-    list-style: none;
+.summary {
+  list-style: none;
 }
 
 /* .on-summary{
@@ -24,310 +23,303 @@ h2{
     color: #333;
 } */
 
-
-
-.page_top_btn{
-    position: fixed;
-    /* font-size: 4rem; */
-    height: 10vh;
-    width: 10vh;
-    top: 80vh;
-    right: 4vw;
-    border-radius: 50%;
-    opacity: 0.8;
-    z-index: 8;
-    /* text-decoration: none; */
+.page_top_btn {
+  position: fixed;
+  /* font-size: 4rem; */
+  height: 10vh;
+  width: 10vh;
+  top: 80vh;
+  right: 4vw;
+  border-radius: 50%;
+  opacity: 0.8;
+  z-index: 8;
+  /* text-decoration: none; */
 }
 
 .header {
-    background-color: #000000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    width: 100%;
-    z-index: 10;
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  width: 100%;
+  z-index: 10;
 }
 
-.header-left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 2vw;
-    font-size: 3vh;
-    color: #fff;
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2vw;
+  font-size: 3vh;
+  color: #fff;
 }
 
-
-.rycaon_b{
-    height: 10vh;
+.rycaon_b {
+  height: 10vh;
 }
 
-.header-right{
-    padding: 0 2vw;
+.header-right {
+  padding: 0 2vw;
 }
 
 /*==================================================
 　5-2-1 3本線が×に
 ===================================*/
 /*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
-.openbtn1{
-    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
-    cursor: pointer;  /*マウスを合わせるとポインターになる*/
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #48daff;
-    /* filter: opacity(0.5); */
+.openbtn1 {
+  position: relative; /*ボタン内側の基点となるためrelativeを指定*/
+  cursor: pointer; /*マウスを合わせるとポインターになる*/
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #48daff;
+  /* filter: opacity(0.5); */
 }
 
 /*ボタン内側*/
-.openbtn1 span{
-    display: inline-block;
-    transition: all .4s;/*アニメーションの設定*/
-    position: absolute;
-    left: 14px;
-    height: 3px;
-    border-radius: 2px;
-    background: #fff;
-    width: 45%;
-    }
+.openbtn1 span {
+  display: inline-block;
+  transition: all 0.4s; /*アニメーションの設定*/
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
 
 .openbtn1 span:nth-of-type(1) {
-    top:15px; 
+  top: 15px;
 }
 
 .openbtn1 span:nth-of-type(2) {
-    top:23px;
+  top: 23px;
 }
 
 .openbtn1 span:nth-of-type(3) {
-    top:31px;
+  top: 31px;
 }
 
 /* activeクラスが付与されると線が回転して×に */
 .openbtn1.active span:nth-of-type(1) {
-    top: 18px;
-    left: 18px;
-    transform: translateY(6px) rotate(-45deg);
-    width: 30%;
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
 }
 
 .openbtn1.active span:nth-of-type(2) {
-    opacity: 0;/*真ん中の線は透過*/
+  opacity: 0; /*真ん中の線は透過*/
 }
 
-.openbtn1.active span:nth-of-type(3){
-    top: 30px;
-    left: 18px;
-    transform: translateY(-6px) rotate(45deg);
-    width: 30%;
+.openbtn1.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
 }
 
-#btn-menu{
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    right: -150%;
-    transition: right 1s ease;
-    /* margin-top:100px; */
-    z-index: 9;
-    width: 100vw;
-    height: 100vh;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#btn-menu {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: -150%;
+  transition: right 1s ease;
+  /* margin-top:100px; */
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#btn-menu.active{
-    /* position: fixed; */
-    right: 0;
-    /* display: flex;
+#btn-menu.active {
+  /* position: fixed; */
+  right: 0;
+  /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; */
 }
 
-.menu_hum{
-    text-decoration: none;
-    margin: 0 20px;
-}   
-
-
-#page1{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.menu_hum {
+  text-decoration: none;
+  margin: 0 20px;
 }
 
-.title1{
-    font-size: 4rem;
+#page1 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../image/top/top_image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#page2{
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
+.title1 {
+  font-size: 4rem;
 }
 
-.represent_img{
-    width: 30vw;
-    border-radius: 10%;
+#page2 {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.introduce{
-    font-size: 5%;
-    padding-right: 10vw;
+.represent_img {
+  width: 30vw;
+  border-radius: 10%;
 }
 
-.Link_R{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.introduce {
+  font-size: 5%;
+  padding-right: 10vw;
+}
+
+.Link_R {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* すべて共通：hideエリアをはじめは非表示 */
-.hide-area{
-    display: none;
-    padding: 30px;
+.hide-area {
+  display: none;
+  padding: 30px;
 }
 
 /* すべて共通：モーダルのボタンの色を変更したい場合 */
 .modaal-close::after,
-.modaal-close:before{
-    background:#ccc
+.modaal-close:before {
+  background: #ccc;
 }
 
 .modaal-close:focus:after,
 .modaal-close:focus:before,
 .modaal-close:hover:after,
-.modaal-close:hover:before{
-    background: #666;
+.modaal-close:hover:before {
+  background: #666;
 }
 
-.info-list{
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
+.info-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
 }
 
-.info{
-    text-decoration: none;
-    font-size: 3vw;
+.info {
+  text-decoration: none;
+  font-size: 3vw;
 }
 
-
-#page3{
-    height: 100vh;
+#page3 {
+  height: 100vh;
 }
 
 /*==================================================
 スライダーのための
 css===================================*/
 
-.slider{
-    width: 94%;
-    margin: 0 auto;
-    padding-top: 10vh;
+.slider {
+  width: 94%;
+  margin: 0 auto;
+  padding-top: 10vh;
 }
 
 .slider img {
-    width: 90%;/*スライダー内の画像を横幅100%に*/
-    height:auto;
+  width: 90%; /*スライダー内の画像を横幅100%に*/
+  height: auto;
 }
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 .slider .slick-slide {
-    margin:0 10px; /*スライド左右の余白調整*/ 
-
+  margin: 0 10px; /*スライド左右の余白調整*/
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 
 .slick .slick-slide {
-    margin:0 5px;
+  margin: 0 5px;
 }
 
 /*矢印の設定*/
 
 /*戻る、次へ矢印の位置*/
-.slick-prev, 
+.slick-prev,
 .slick-next {
-    position: absolute;/*絶対配置にする*/
-    top: 42%;
-    cursor: pointer;/*マウスカーソルを指マークに*/
-    outline: none;/*クリックをしたら出てくる枠線を消す*/
-    border-top: 1em solid #666;/*矢印の色*/
-    border-right: 1em solid #666;/*矢印の色*/
-    height: 3em;
-    width: 3em;
+  position: absolute; /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer; /*マウスカーソルを指マークに*/
+  outline: none; /*クリックをしたら出てくる枠線を消す*/
+  border-top: 1em solid #666; /*矢印の色*/
+  border-right: 1em solid #666; /*矢印の色*/
+  height: 3em;
+  width: 3em;
 }
 
-.slick-prev {/*戻る矢印の位置と形状*/
-    left: 4%;
-    transform: rotate(-135deg);
-    z-index: 1;
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 4%;
+  transform: rotate(-135deg);
+  z-index: 1;
 }
 
-.slick-next {/*次へ矢印の位置と形状*/
-    right: 4%;
-    transform: rotate(45deg);
-
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 4%;
+  transform: rotate(45deg);
 }
 
 /*ドットナビゲーションの設定*/
 
 .slick-dots {
-    text-align:center;
-    margin:20px 0 0 0;
+  text-align: center;
+  margin: 20px 0 0 0;
 }
 
 .slick-dots li {
-    display:inline-block;
-    margin:0 5px;
+  display: inline-block;
+  margin: 0 5px;
 }
 
 .slick-dots button {
-    color: transparent;
-    outline: none;
-    width:30px;/*ドットボタンのサイズ*/
-    height:30px;/*ドットボタンのサイズ*/
-    display:block;
-    border-radius:50%;
-    background:#ccc;/*ドットボタンの色*/
+  color: transparent;
+  outline: none;
+  width: 30px; /*ドットボタンのサイズ*/
+  height: 30px; /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc; /*ドットボタンの色*/
 }
 
-.slick-dots .slick-active button{
-    background:#333;/*ドットボタンの現在地表示の色*/
+.slick-dots .slick-active button {
+  background: #333; /*ドットボタンの現在地表示の色*/
 }
 /*ここまでスライダー*/
 
-#page4{
-    width: 100%;
-    height: 100vh;
-}
-
-#transition{
-    margin:0;
-    padding: 0;
-    list-style: none;
-    width:100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#transition {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* .bgc_trans{
@@ -337,48 +329,46 @@ css===================================*/
     align-items: center;
 } */
 
-.activity{
-    position: absolute;
+.activity {
+  position: absolute;
 }
 /* 
 .bgc_trans{
     background-color: #3b48ff;
 } */
 
-#activity1_img{
-    width: 35vw;
-    /* margin-top: 5vh;
+#activity1_img {
+  width: 35vw;
+  /* margin-top: 5vh;
     margin-right: 5vw; */
-    filter: opacity(0.6);
-    z-index: 1;
-    transform: rotate(10deg);
+  filter: opacity(0.6);
+  z-index: 1;
+  transform: rotate(10deg);
 }
 
-#activity2_img{
-    width: 30vw;
-    /* margin-top: 5vh;
+#activity2_img {
+  width: 30vw;
+  /* margin-top: 5vh;
     margin-right: 5vw; */
-    filter: opacity(0.7);
-    /* filter: blur(0.6); */
-    /* background-color: #48daff; */
-    z-index: 2;
-    transform: rotate(345deg);
-    /* animation: trans_cr 3s linear 0s forwards;
+  filter: opacity(0.7);
+  /* filter: blur(0.6); */
+  /* background-color: #48daff; */
+  z-index: 2;
+  transform: rotate(345deg);
+  /* animation: trans_cr 3s linear 0s forwards;
     animation-duration: 1;
     animation-fill-mode: backwards;
     animation-iteration-count: infinite; */
 }
 
-#activity3_img{
-    width: 25vw;
-    z-index: 3;
-    /* animation: trans_lc 3s linear 0s forwards;
+#activity3_img {
+  width: 25vw;
+  z-index: 3;
+  /* animation: trans_lc 3s linear 0s forwards;
     animation-duration: 1;
     animation-fill-mode: backwards;
     animation-iteration-count: infinite; */
 }
-
-
 
 /* @keyframes trans_lc {
     from {
@@ -402,92 +392,92 @@ css===================================*/
     }
 } */
 
-#page5{
-    height: 100vh;
+#page5 {
+  height: 100vh;
 }
 
 /*==================================================
 スライダーのためのcss
 ===================================*/
 .flower {
-    position:relative;
-    z-index: 1;
-    top: 15vh;
-    /* height: 100vh;スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
+  position: relative;
+  z-index: 1;
+  top: 15vh;
+  /* height: 100vh;スライダー全体の縦幅を画面の高さいっぱい（100vh）にする */
 }
 
 /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
 
 .flower .flower-item {
-    margin:5px 10px;/*スライド左右の余白調整*/
+  margin: 5px 10px; /*スライド左右の余白調整*/
 }
 
 .flower-top,
 .flower-bottom {
-    margin:5px 10px;/*スライド左右上下の余白調整*/
-    /* height: 50vh;スライダー上下の縦幅を画面の高さの半分（50vh）にする */
+  margin: 5px 10px; /*スライド左右上下の余白調整*/
+  /* height: 50vh;スライダー上下の縦幅を画面の高さの半分（50vh）にする */
 }
 
 /*　背景画像設定　*/
 
 .flower-item01 {
-    background:url(../image/sport-908267_1280.jpg);
+  background: url(../image/sport-908267_1280.jpg);
 }
 .flower-item02 {
-    background:url(../image/volleyball-1977364_1280.jpg);
+  background: url(../image/volleyball-1977364_1280.jpg);
 }
 .flower-item03 {
-    background:url(../image/volleyball-2639700_1280.jpg);
+  background: url(../image/volleyball-2639700_1280.jpg);
 }
 .flower-item04 {
-    background:url(../image/volley1.jpeg);
+  background: url(../image/volley1.jpeg);
 }
 .flower-item05 {
-    background:url(../image/volley_体育館.jpg);
+  background: url(../image/volley_体育館.jpg);
 }
 .flower-item06 {
-    background:url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-9/img/img_01.jpg);
+  background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-9/img/img_01.jpg);
 }
 .flower-item07 {
-    background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_02.jpg);
+  background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_02.jpg);
 }
 .flower-item08 {
-    background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_03.jpg);
+  background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_03.jpg);
 }
 .flower-item09 {
-    background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_04.jpg);
+  background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_04.jpg);
 }
 .flower-item10 {
-    background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_05.jpg);
+  background: url(https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-1-8/img/img_05.jpg);
 }
 
 .flower-item {
-    width: 800vw;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
-    height:40vh;/*各スライダーの縦幅を画面の高さの半分（50vh）にする*/
-    background-repeat: no-repeat;/*背景画像をリピートしない*/
-    background-position: center;/*背景画像の位置を中央に*/
-    background-size: cover;/*背景画像が.flower-item全体を覆い表示*/
+  width: 800vw; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 40vh; /*各スライダーの縦幅を画面の高さの半分（50vh）にする*/
+  background-repeat: no-repeat; /*背景画像をリピートしない*/
+  background-position: center; /*背景画像の位置を中央に*/
+  background-size: cover; /*背景画像が.flower-item全体を覆い表示*/
 }
 
-.footer{
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+.footer {
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
 
-.gaiyou{
-    text-decoration: none;
+.gaiyou {
+  text-decoration: none;
 }
 
-.cutBall{
-    border-radius: 50%;
-    height: 5vh;
-    opacity: 0.9;
+.cutBall {
+  border-radius: 50%;
+  height: 5vh;
+  opacity: 0.9;
 }
 
-.cRight{
-    font-size: 2rem;
+.cRight {
+  font-size: 2rem;
 }
