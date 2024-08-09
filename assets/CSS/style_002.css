@@ -1,0 +1,33 @@
+.page-content-01 {
+  padding: 20px 0;
+  background-color: #333;
+}
+.page-content-02 {
+  padding: 20px 0;
+  background-color: #ee0014;
+}
+.contents_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.topics {
+  color: white;
+  padding-bottom: 40px;
+}
+
+.topics_contents {
+  width: 24%;
+  /* border: white 1px solid; */
+}
+.content_img {
+  width: 100%;
+}
+.content_title {
+  color: white;
+}
+.content_pra {
+  color: white;
+}
