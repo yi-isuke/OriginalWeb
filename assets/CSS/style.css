@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-*{
+body{
     background-image: url(../image/background-color.png);
     background-size: 100vw;
     background-repeat: repeat;
 }
 
-h1{
+.title1{
     font-family: "Nikukyu";
 }
 
@@ -168,8 +168,8 @@ h2{
     justify-content: center;
 }
 
-.title1_p1{
-    font-size: 5vw;
+.title1{
+    font-size: 4rem;
 }
 
 #page2{
@@ -330,9 +330,20 @@ css===================================*/
     align-items: center;
 }
 
+/* .bgc_trans{
+    background-color: #4fc2ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 .activity{
     position: absolute;
 }
+/* 
+.bgc_trans{
+    background-color: #3b48ff;
+} */
 
 #activity1_img{
     width: 35vw;
@@ -464,6 +475,7 @@ css===================================*/
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
 }
 
 .gaiyou{

@@ -1,0 +1,23 @@
+body{
+    background-image: url(../image/background-color.png);
+    background-size: 100vw;
+    background-repeat: repeat;
+}
+
+.section__represent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title__represent{
+    font-size: 4rem;
+}
+.img__represent{
+    height: 40vh;
+}
+.back__represent{
+    height: 15vh;
+    border-radius: 50%;
+}
